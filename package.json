@@ -1,0 +1,23 @@
+{
+  "name": "nested-elm-land",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "pnpm i && pnpm dev",
+    "dev": "concurrently -n ELM,API -c cyan,magenta \"pnpm dev:frontend\" \"pnpm dev:backend\"",
+    "dev:frontend": "(cd apps/frontend && pnpm dev)",
+    "dev:backend": "(cd apps/backend && pnpm dev)",
+    "build": "pnpm build:frontend",
+    "build:frontend": "(cd apps/frontend && pnpm build)"
+  },
+  "keywords": [],
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  }
+}

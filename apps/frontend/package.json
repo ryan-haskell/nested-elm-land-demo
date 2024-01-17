@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "> Built with [Elm Land](https://elm.land) 🌈",
+  "main": "index.js",
+  "scripts": {
+    "dev": "elm-land server",
+    "build": "elm-land build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
